@@ -1,0 +1,448 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+#topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #011329;
+}
+
+#logo {
+    width: 175px;
+}
+
+#home {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 22px;
+    padding-bottom: 2px;
+    position: relative; 
+    transition: .5s;
+}
+
+#home::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #466385;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+#home:hover {
+    color: #eaeaea;
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+#home:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#cont1 {
+    background-image: url('./imagens/bg-header.svg');
+    color: aliceblue;
+    text-align: center;
+    padding: 30px;
+}
+
+#cont1 h1 {
+    font-size: 48px;
+    line-height: 50px;
+    margin-bottom: 60px;
+}
+
+#presentation {
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    align-items: start;
+}
+
+#presentation div {
+    text-align: justify;
+    font-size: 25px;
+}
+
+#presentation div p {
+    margin-bottom: 30px;
+}
+
+.btn-container{
+    display: flex;
+    margin: auto;
+    width: 65%;
+    margin-bottom: 60px
+}
+
+.btn {
+    padding: 10px 40px;
+    background: #A4BA25;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.btn:hover {
+    background: #85971b;
+    transform: scale(.9);
+    transition: .6s;
+}
+
+
+#cont2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#sectionHeader{
+    display: flex;
+    align-items: start;
+}
+
+#perfil-cont2{
+   margin-right: 60px;
+}
+
+section h2{
+    font-size: 42px;
+    margin-bottom: 70px;
+}
+
+section h3{
+    font-size: 40px;
+    font-weight: 500;
+}
+
+#cards{
+    width: 75%;
+    margin: 0 auto;
+
+    font-size: 20px;
+}
+
+.titulo-cards{
+    font-weight: bold;
+    text-decoration:underline;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+#card1{
+    display: flex;
+    justify-content: end;
+    margin-bottom: 20px;
+}
+
+#card2{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+#card3{
+    display: flex;
+    justify-content:end;
+    margin-bottom: 20px;
+}
+
+#card4{
+    display: flex;
+    justify-content: start;
+    margin-bottom: 20px;
+}
+
+#cont3{
+    background: linear-gradient(180deg, #466385 0%, #011329 100%);
+    color: rgba(255, 255, 255, 1);
+}
+
+#titulo-cont3{
+    text-align: center;
+    font-size: 48px;
+    padding: 60px 0;
+}
+
+#infosHospital{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+}
+
+label{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+input{
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+#checkBox{
+    display: flex;
+    align-items: center;
+    margin: auto;
+    width: 40%;
+
+    margin-bottom: 40px;
+}
+
+#checkBox p{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#checkBox label{
+    font-size: 20px;
+    font-weight: 300;
+    margin: 0;
+}
+
+#checkBox input{
+    margin: 0 20px 0 20px;
+}
+
+
+#infosPessoais{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+}
+
+
+
+
+/* Respansividade para telas menores*/
+
+@media(max-width: 1323px){
+    
+    section h2{
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    
+    section h3{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    #cards{
+        width: 85%;
+        margin: 0 auto;
+        font-size: 20px;
+    }
+}
+
+
+@media(max-width: 1184px){
+    #presentation p {
+        font-size: 25px;
+       
+    }
+
+    #video-header iframe {
+        height: 220px;
+        width: 400px;
+    }
+
+    section h2{
+        font-size: 30px;
+        margin-bottom: 70px;
+    }
+    
+    section h3{
+        font-size: 30px;
+        font-weight: 500;
+    }
+    
+    #cards{
+        width: 95%;
+        margin: 0 auto;
+    
+        font-size: 20px;
+    }
+}
+
+/* Respansividade para mobaile*/
+@media(max-width: 990px){
+    #logo {
+        width: 100px;
+    }
+
+    #home {
+        font-size: 15px;
+    }
+    
+    #cont1 h1 {
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 60px;
+    }
+    
+
+    #presentation p {
+        font-size: 20px;
+        text-align: start;
+    }
+
+    #video-header iframe {
+        height: 200px;
+        width: 350px;
+    }
+
+    #btn-container {
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    #cont2{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    
+    #perfil-cont2{
+        height: 120px;
+        margin-right: 20px;
+    }
+
+    #sectionHeader{
+        display: flex;
+        align-items: center;
+    }
+
+    
+    section h2{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    section h3{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    #cards{
+        width: 100%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+}
+
+/* Respansividade para mobaile*/
+@media(max-width: 786px) {
+    #logo {
+        width: 100px;
+    }
+
+    #home {
+        font-size: 15px;
+    }
+    
+    #cont1 h1 {
+        font-size: 24px;
+        line-height: 30px;
+        text-align: start;
+        margin-bottom: 60px;
+    }
+    
+    #presentation {
+        flex-direction: column;
+    }
+
+    #presentation p {
+        font-size: 15px;
+        text-align: start;
+    }
+
+    #video-header iframe {
+        height: 200px;
+        width: 250px;
+    }
+
+    #btn-container {
+        margin-top: 20px;
+        margin-bottom: 20px
+    }
+
+    #cont2{
+        display: flex;
+        flex-direction: column;
+        padding: 20px 20px;
+    }
+    
+    #perfil-cont2{
+        height: 120px;
+        margin-right: 20px;
+    }
+
+    #sectionHeader{
+        display: flex;
+        align-items: center;
+    }
+
+    
+    section h2{
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+    
+    section h3{
+        font-size: 15px;
+        font-weight: 500;
+    }
+    
+    #cards{
+        width: 100%;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    #cards img{
+        width: 50px;
+    }
+    
+    #card1{
+        justify-content: center;
+    }
+    
+    #card2{
+        justify-content: center;
+    }
+    
+    #card3{
+        justify-content: center;
+    }
+    
+    #card4{
+        justify-content: center;
+    }
+}
