@@ -1,19 +1,23 @@
 {
   "name": "projeto-equipacare",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "backend/api.js",
   "scripts": {
+    "start": "nodemon backend/api.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "grupo1-dnc",
   "license": "ISC",
-  "description": "",
+  "description": "Projeto para calcular recomendações de autoclaves e lavadoras em hospitais",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
     "express": "^4.19.2",
-    "mysql": "^2.18.1",
     "mysql2": "^3.10.1",
     "sequelize": "^6.37.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
   }
 }

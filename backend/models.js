@@ -24,7 +24,18 @@ const HospitalData = sequelize.define('HospitalData', {
     num_leitos_dia: { type: DataTypes.INTEGER, allowNull: false },
     num_autoclaves: { type: DataTypes.INTEGER, allowNull: false },
     num_lavadoras: { type: DataTypes.INTEGER, allowNull: false }
+}, {
+    timestamps: false // Desativa as colunas createdAt e updatedAt
 });
+
+// Testar a conexão com o banco de dados
+sequelize.authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
 
 module.exports = sequelize;
 module.exports.HospitalData = HospitalData;

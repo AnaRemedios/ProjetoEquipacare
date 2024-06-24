@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         // Envia os dados para o backend
-        fetch('http://localhost:3001', {
+        fetch('http://localhost:3001/recommendations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
