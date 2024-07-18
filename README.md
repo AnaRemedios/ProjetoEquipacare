@@ -12,7 +12,7 @@ Tecnologias Utilizadas:
 
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express
-Banco de Dados: MongoDB
-Outras Bibliotecas: jQuery, Bootstrap
+Banco de Dados: MySQL
+
 
 
