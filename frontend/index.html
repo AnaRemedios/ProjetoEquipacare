@@ -4,12 +4,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <title>Calculadora Equipacare</title>
 </head>
@@ -31,11 +30,11 @@
         <p>
           Bem-vindo à nossa ferramenta de <br>
           dimensionamento de equipamentos de <br>
-          esterilização! <br><br>
+          esterilização! <br>
         </p>
         <p>
           Nossa metodologia comprovada agora <br>
-          disponível em uma ferramenta fácil de usar
+          disponível em uma ferramenta <br> fácil de usar
         </p>
       </div>
 
@@ -46,7 +45,7 @@
     </div>
 
     <div class="btn-container">
-      <button class="btn">Conhecer</button>
+      <a class="btn" href="#conheca">Conhecer</a>
     </div>
   </header>
 
@@ -152,84 +151,157 @@
 
     <h2 id="titulo-cont3">Experimente nossa calculadora </h2>
 
-<div class="container">      
-  <div class="card">
-    
-    <form>
-      
-      <div id="formBasico">
-
-        <label for="">Nome do hospital</label> 
-        <input type="text" placeholder="Qual é o nome do hospital?" required>
-        <label for="">CNPJ do hospital</label>
-        <input type="number" placeholder="Qual é o tamanho total do hospital em metros quadrados?" required>
-        <label for="">Endereço do Hospital</label>
-        <input type="text" placeholder="construido, em planejamento, em construção?" required>
-        <label for="">Já possui CME?</label>
-        <input type="text" placeholder="O hospital implantará uma nova cme ou ja possui uma?" required>
-        <label id="name" for="">Se já possui CME...</label>
-        <input type="text" id="name" placeholder="Será substituição ou ampliação?" required>
-        <h3>Contato do Hospital</h3>
-        <label for="">Nome</label>
-        <input type="text" placeholder="Qual é o seu nome?" required>
-        <label for="">Seu cargo</label>
-        <input type="text" placeholder="Qual é o cargo que ocupa no hospital?" required>
-        <label for="">E-mail</label>
-        <input type="text" placeholder="Qual é o seu e-mail?" required>
-        <label id="name" for="">Celular</label>
-        <input type="number" id="name" placeholder="Qual é o seu whatsapp?" required>
-
-      </div>
-    </form>
-  </div> 
-
-  <div class="card">  
-
-    <form>
-
-      <div id="formAvancado">
-      
-        <label for="">Número de salas cirúrgicas</label> 
-        <input type="text" placeholder="Quantas salas cirúrgicas tem o hospital?" required>
-        <label for="">Número de cirurgias por sala ao dia</label>
-        <input type="text" placeholder="Quantas cirúrgias ao dia são feitas em cada sala?" required>
-        <label for="">Processamento de tecidos</label>
-        <input type="text" placeholder="sim ou não?" required>
-        <label for="">Dias de cirurgia</label>
-        <input type="text" placeholder="Quantos dias na semana ocorrem cirurgias?" required>
-        <label for="">Intervalo de pico de funcionamento da CME</label>
-        <input type="text" placeholder="Período de processamento de 90% do material" required>
-        <label for="">Leitos de Internação/RPA/OBSERVAÇÃO</label>
-        <input type="text" placeholder="Quantos leitos de internação existem?" required>
-        <label id="name" for="">Leitos UTI</label>
-        <input type="text" id="name" placeholder="Quantos leitos de UTIs existem?" required>
-        <label id="name" for="">Número de Leitos dos Dia</label>
-        <input type="text" id="name" placeholder="Quantos leitos são usados ao dia?" requiredc>
-        <label id="name" for="">Número de autoclaves</label>
-        <input type="text" id="name" placeholder="Quantos autoclaves são usados?">
-        <label id="name" for="">Número de lavadoras termo desinfectoras</label>
-        <input type="text" id="name" placeholder="Quantos lavadoras são usados">
-      
-      </div>
-      <div id="formBotao">
-        <button type="submit" id="btn-form" class="btn">Acessar</button>
-      </div>
-    </form>
-  </div>
-</div>
-
-   
-
+    <form action="" class="container" id="multiStepForm">
+      <div>      
+          <div class="card active">
+              <div>
+                  <h3>Contato do Hospital</h3>
+                  <label for="hospitalName">Nome do hospital</label> 
+                  <input type="text" id="hospitalName" name="nome_hospital" placeholder="Qual é o nome do hospital?" required>
+                  
+                  <label for="cnpj">CNPJ do hospital</label>
+                  <input type="text" id="cnpj" name="cnpj_hospital" placeholder="Qual é o CNPJ do hospital?" required>
+                  
+                  <label for="hospitalAddress">Endereço do Hospital</label>
+                  <input type="text" id="hospitalAddress" name="endereco_hospital" placeholder="Qual o endereço do hospital?" required>
+                  
+                  <label for="contactName">Qual o seu nome?</label>
+                  <input type="text" id="contactName" name="nome_contato" placeholder="Nome e sobrenome" required>
+                  
+                  <label for="contactRole">Seu cargo</label>
+                  <input type="text" id="contactRole" name="cargo_contato" placeholder="Qual é o cargo que ocupa no hospital?" required>
+                  
+                  <label for="contactEmail">E-mail</label>
+                  <input type="email" id="contactEmail" name="email_contato" placeholder="Qual é o seu e-mail?" required>
+                  
+                  <label for="contactPhone">Celular</label>
+                  <input type="tel" id="contactPhone" name="celular_contato" placeholder="Qual é o seu WhatsApp?" required>
+                  
+                  <div class="navigation-buttons">
+                      <button type="button" class="next-btn">Salvar</button>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="card">
+              <div>
+                  <h3>Algumas especificidades</h3>
+                  <label for="stage">Momento atual do Empreendimento:</label>
+                  <select id="stage" name="momento_empreendimento">
+                      <option value="Elaboração do projeto">Elaboração do projeto</option>
+                      <option value="Visita Tecnica para avaliação">Visita Tecnica para avaliação</option>
+                      <option value="Dimensionamento e especificação tecnica">Dimensionamento e especificação tecnica</option>
+                      <option value="Análise financeira dos equipamentos">Análise financeira dos equipamentos</option>
+                      <option value="Comissionamento das instalações">Comissionamento das instalações</option>
+                      <option value="Outros">Outros</option>
+                  </select>
+                  <br><br>
   
-
+                  <label for="clinicalEngineeringSupport">Possui engenharia clínica para apoiar o processo de seleção dos equipamentos?</label>
+                  <select id="clinicalEngineeringSupport" name="possui_engenharia_clinica">
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="clinicalEngineeringType">Se SIM, sua engenharia clínica é própria ou terceirizada?</label>
+                  <select id="clinicalEngineeringType" name="clinicalEngineeringType">
+                      <option value="Própria">Própria</option>
+                      <option value="Terceirizada">Terceirizada</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="clinicalEngineeringSupportNeeds">Do que sente mais falta no suporte da engenharia clínica?</label>
+                  <textarea id="clinicalEngineeringSupportNeeds" name="clinicalEngineeringSupportNeeds" class="custom-textarea" maxlength="200" rows="4" cols="60"></textarea>
+                  <br><br>
+  
+                  <label for="hasCME">Já possui CME?</label>
+                  <select id="hasCME" name="possui_cme">
+                      <option value="Sim">Sim</option>
+                      <option value="Não">Não</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="cmeExpansionType">Se já possui CME, será substituição ou ampliação?</label>
+                  <select id="cmeExpansionType" name="cmeExpansionType">
+                      <option value="Substituição">Substituição</option>
+                      <option value="Ampliação">Ampliação</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="machineStructure">Estrutura de máquinas previstas em planta ou área existente: Nos dê uma ideia das quantidades e dimensões previstas inicialmente para Autoclave e Lavadora Termodesinfectora</label>
+                  <textarea id="machineStructure" name="machineStructure" class="custom-textarea" maxlength="400" rows="6" cols="60"></textarea>
+  
+                  <div class="navigation-buttons">
+                      <button type="button" class="prev-btn">Voltar</button>
+                      <button type="button" class="next-btn">Salvar</button>
+                  </div>
+              </div>
+          </div>
+        
+          <div class="card">
+              <div>
+                  <h3>Dados para CME</h3>
+                  <label for="numSurgeryRooms">Número de salas cirúrgicas</label>
+                  <input type="number" id="numSurgeryRooms" name="num_salas_cirurgicas" placeholder="Quantas salas cirúrgicas tem o hospital?" required>
+                  
+                  <label for="numSurgeriesPerRoomPerDay">Número de cirurgias por sala ao dia</label>
+                  <input type="number" id="numSurgeriesPerRoomPerDay" name="num_cirurgias_por_sala_por_dia" placeholder="Quantas cirurgias ao dia são feitas em cada sala?" required>
+                  
+                  <label for="processTissues">Processamento de tecidos?</label>
+                  <select id="processTissues" name="processamento_tecidos">
+                      <option value="Sim">Sim</option>
+                      <option value="Não, apenas instrumental">Não, apenas instrumental</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="surgeryDays">Dias de cirurgia: Quantos dias na semana ocorrem cirurgias?</label>
+                  <select id="surgeryDays" name="dias_cirurgia">
+                      <option value="1 ">1 por semana</option>
+                      <option value="2 ">2 por semana</option>
+                      <option value="3 ">3 por semana</option>
+                      <option value="4 ">4 por semana</option>
+                      <option value="5 ">5 por semana</option>
+                      <option value="6 ">6 por semana</option>
+                      <option value="7 ">7 por semana</option>
+                  </select>
+                  <br><br>
+  
+                  <label for="peakOperationInterval">Qual o intervalo de pico de funcionamento da CME?</label>
+                  <input type="text" id="peakOperationInterval" name="intervalo_pico" placeholder="Período de processamento de 90% do material" required>
+                  
+                  <label for="numTotalBeds">Número total dos leitos de: INTERNAÇÃO, RPA e OBSERVAÇÃO</label>
+                  <input type="number" id="numTotalBeds" name="num_leitos_internacao" placeholder="Quantos destes leitos no total existem?" required>
+                  
+                  <label for="numICUBeds">Número dos Leitos UTI</label>
+                  <input type="number" id="numICUBeds" name="num_leitos_uti" placeholder="Quantos leitos de UTIs existem?" required>
+                  
+                  <label for="numBedsUsedPerDay">Número de Leitos no hospital ao Dia</label>
+                  <input type="number" id="numBedsUsedPerDay" name="num_leitos_dia" placeholder="Quantos leitos são usados ao dia?" required>
+                  
+                  <label for="numAutoclaves">Número de autoclaves</label>
+                  <input type="number" id="numAutoclaves" name="num_autoclaves" placeholder="Quantos autoclaves são usados?" required>
+                  
+                  <label for="numWasherDisinfectors">Número de lavadoras termo desinfectoras</label>
+                  <input type="number" id="numWasherDisinfectors" name="num_lavadoras" placeholder="Quantos lavadoras são usadas" required>
+  
+                  <div class="navigation-buttons">
+                      <button type="button" class="prev-btn">Voltar</button>
+                  </div>
+              </div>
+              <div class="btn-container" id="btn-form">
+                  <button type="submit" class="btn">Acessar</button>
+              </div>
+          </div>
+      </div>
+  </form>
+  
   <footer>
-    <H1> RODAPE </H1>
+    <img src="imagens/logo.svg">
   </footer>
-
-  <script src="script.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="script.js"></script>
 </body>
-
-
-
 </html>

@@ -1,3 +1,4 @@
+/* Estilo para o index.html*/
 * {
     margin: 0;
     padding: 0;
@@ -58,40 +59,43 @@ body {
     text-align: center;
     padding: 30px;
     height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 
-#cont1 h1 {
+#titulo-header {
     font-size: 48px;
     font-weight: 700;
     line-height: 50px;
-    margin-bottom: 10%;
     margin-top: 2%;
+    margin-bottom: 8%;
 }
 
 #presentation {
     display: flex;
-    margin: auto;
-    justify-content: space-around;
-    align-items: start;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+} 
 
-}
-
-#presentation div {
-    text-align: justify;
-    font-size: 36px;
-    font-weight: 500;
+ #presentation div {
+    text-align: left;
+    font-size: 32px;
+    font-weight: 400;
 }
 
 #presentation div p {
-    margin-bottom: 8%;
-    margin-left: 2%;
+    margin-bottom: 15%;
+} 
+
+#video-header {
+    margin-left: 20px;
 }
 
 .btn-container{
-    display: flex;
-    margin: 3% 20% 3% 20%;
-    width: 65%;
-    margin-bottom: 60px
+    margin-top: 20px;
 }
 
 .btn {
@@ -105,7 +109,9 @@ body {
     font-family: 'Roboto Condensed';
     cursor: pointer;
     transition: .6s;
+    text-decoration: none;
 }
+
 
 .btn:hover {
     background: #3C3D50;
@@ -143,9 +149,7 @@ section h2{
 
 section h3{
     font-size: 40px;
-    font-weight: 600;
-    
-  
+    font-weight: 600;  
 }
 
 #cards{
@@ -193,35 +197,36 @@ section h3{
 #cont3{
     background: linear-gradient(180deg, #466385 0%, #011329 100%);
     color: rgba(255, 255, 255, 1);
-
+    padding: 5% 0;
+    margin-top: -40px;
 }
 
 #conheca{
     display: flex;
     margin: auto;
     justify-content: space-around;   
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 #cont3 h1{
     font-size: 48px;
     font-weight: 700;
     text-align: center;
-    padding: 5%;
+    padding-bottom: 12px;
     
 }
 
 #imagemConheca{
     height: 700px;
-    margin-left: 2%;
+    margin-left: 0 2%;
 }
 
 #informativoConheca{
     text-align: justify;
     font-size: 32px;
-    font-weight: 500;
-    margin-right: 2%;
-    margin-top: 3%;
-    margin-bottom: 10%;
+    font-weight: 400;
+    margin: 12% 2% 10% 2%;
 }
 
 #titulo-cont3{
@@ -229,6 +234,7 @@ section h3{
     font-size: 48px;
     padding: 60px 0;
     font-family: 'Roboto Condensed';
+    margin-bottom: 5%;
 }
 
 .container {
@@ -246,6 +252,19 @@ section h3{
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 500px;
+    margin-bottom: 10%;
+
+    display: none;
+}
+
+.card.active {
+    display: block;
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 
 .card label {
@@ -257,7 +276,7 @@ section h3{
 }
 
 .card input {
-    width: 95%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ced4da;
     border-radius: 5px;
@@ -265,39 +284,52 @@ section h3{
     font-family: 'Roboto Condensed';
 }
 
-#formBasico h3{
+.card h3{
     display: block;
     font-size: 22px;
     font-weight: 600;
     color: #233B57;
     text-align: center;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-}
-/* #formAvancado{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 30%;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
-#formBasico{
-    display: flex;
-    flex-direction: column;
-    margin: auto;
-    width: 30%;
-} */
+.prev-btn, .next-btn {
+    background-color: #A4BA25;
+    color: white; 
+    padding: 5px 10px; 
+    border: none; 
+    border-radius: 8px; 
+    font-size: 16px; 
+    font-weight: 400; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: #8AA020; 
+}
 
 #btn-form {
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-#formBotao{
     display: flex;
     justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
 }
+
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 2%;
+}
+
+.custom-textarea {
+    width: 100%; 
+    max-width: 100%; /* Garante que não ultrapasse a largura do contêiner */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
 
 /* Respansividade para telas menores*/
 
@@ -318,10 +350,51 @@ section h3{
         margin: 0 auto;
         font-size: 20px;
     }
+
+    #cont3 h1 {
+        font-size: 40px;
+        padding-bottom: 30px;
+    }
+
+    #imagemConheca {
+        height: 500px;
+    }
+
+    #informativoConheca {
+        font-size: 28px;
+    }
 }
 
 
 @media(max-width: 1184px){
+    #presentation {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #video-header {
+        margin-bottom: 20px;
+    }
+
+    #presentation div {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    #presentation div p {
+        margin-left: 0;
+    }
+
+    .btn-container {
+        width: 80%;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 15px 0;
+    }
+
     #presentation p {
         font-size: 25px;
        
@@ -348,7 +421,21 @@ section h3{
     
         font-size: 20px;
     }
+
+    #cont3 h1 {
+        font-size: 36px;
+        padding: 5%;
+    }
+
+    #imagemConheca {
+        height: 500px;
+    }
+
+    #informativoConheca {
+        font-size: 28px;
+    }
 }
+
 
 /* Respansividade para mobaile*/
 @media(max-width: 990px){
@@ -415,10 +502,45 @@ section h3{
         margin-top: 20px;
     }
 
+    #conheca {
+        flex-direction: column;
+    }
+
+    #imagemConheca {
+        height: auto;
+        width: 90%;
+        margin: 0 auto 20px auto;
+    }
+
+    #informativoConheca {
+        font-size: 24px;
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    #cont3 h1 {
+        font-size: 30px;
+        padding: 20px 0;
+    }
+
 }
 
 /* Respansividade para mobaile*/
 @media(max-width: 786px) {
+    #titulo-header {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #presentation div {
+        font-size: 20px;
+    }
+
+    #video-header iframe {
+        width: 100%;
+        height: auto;
+    }
+
     #logo {
         width: 100px;
     }
@@ -533,4 +655,339 @@ section h3{
         font-size: 15px;
     }    
 
+    #conheca {
+        flex-direction: column;
+    }
+
+    #imagemConheca {
+        height: auto;
+        width: 80%; 
+        margin: 0 auto 20px auto;
+    }
+
+    #informativoConheca {
+        font-size: 24px;
+        margin: 0 auto;
+        width: 80%; 
+    }
+
+    #cont3 h1 {
+        font-size: 30px;
+        padding: 20px 0;
+    }
+
 }
+
+/* Estilos para a página de login */
+
+#login-container {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#login-form {
+    background: #fff;
+    width: 100%;
+    max-width: 400px;
+}
+
+#login-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+#login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    font-size: 14px;
+}
+
+#login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #011329;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#login-form button:hover {
+    background-color: #466385;
+}
+
+#login-form p {
+    margin-top: 10px;
+}
+
+#login-form a {
+    color: #011329;
+    text-decoration: none;
+}
+
+#login-form a:hover {
+    text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+
+@media (max-width: 1323px) {
+    #login-form h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1184px) {
+    #login-form {
+        padding: 20px;
+    }
+
+    #login-form h2 {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 990px) {
+    #login-form {
+        padding: 15px;
+    }
+
+    #login-form h2 {
+        font-size: 18px;
+    }
+
+    #login-form button {
+        font-size: 14px;
+    }
+
+    #login-form label,
+    #login-form input {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 786px) {
+    #login-form {
+        padding: 10px;
+    }
+
+    #login-form h2 {
+        font-size: 16px;
+    }
+
+    #login-form button {
+        font-size: 12px;
+    }
+
+    #login-form label,
+    #login-form input {
+        font-size: 12px;
+    }
+}
+
+/* Estilos para a dashboard */
+
+#dashboard-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px;
+    border-bottom: 1px solid #ccc;
+    background-color: #011329; 
+    width: 100%;
+    border-radius: 8px;
+}
+
+#header img {
+    max-width: 150px;
+}
+
+#header nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#header nav a:hover {
+    color: #ccc;
+}
+
+#main {
+    padding: 20px 0;
+}
+
+#main h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+}
+
+#overview {
+    margin-bottom: 40px;
+}
+
+#overview h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+#recommendations{
+    margin-bottom: 40px;
+}
+
+#recommendations h2{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding: 40px;
+}
+
+thead th {
+    white-space: nowrap;
+}
+
+tbody td {
+    white-space: nowrap;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+thead {
+    background-color: #f4f4f4;
+}
+
+/* Responsividade para telas menores */
+
+@media (max-width: 1323px) {
+    #header nav a {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+
+    #main h1 {
+        font-size: 2rem;
+    }
+
+    #overview h2 {
+        font-size: 1.75rem;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 1184px) {
+    #header img {
+        max-width: 120px;
+    }
+
+    #header nav a {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    #main h1 {
+        font-size: 1.75rem;
+    }
+
+    #overview h2 {
+        font-size: 1.5rem;
+    }
+
+    th, td {
+        padding: 6px;
+    }
+}
+
+@media (max-width: 990px) {
+    #header img {
+        max-width: 100px;
+    }
+
+    #header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #header nav a {
+        font-size: 14px;
+        margin: 5px 0;
+    }
+
+    #main h1 {
+        font-size: 1.5rem;
+    }
+
+    #overview h2 {
+        font-size: 1.25rem;
+    }
+
+    th, td {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 786px) {
+    #header img {
+        max-width: 80px;
+    }
+
+    #header nav a {
+        font-size: 12px;
+        margin: 3px 0;
+    }
+
+    #main h1 {
+        font-size: 1.25rem;
+    }
+
+    #overview h2 {
+        font-size: 1rem;
+    }
+
+    th, td {
+        font-size: 12px;
+        padding: 4px;
+    }
+}
+
